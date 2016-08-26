@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="cainiao" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/cainiao" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/cainiao" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/courier.h" />
+		<Unit filename="include/eorder.h" />
+		<Unit filename="include/location.h" />
+		<Unit filename="include/o2o_order.h" />
+		<Unit filename="include/problem.h" />
+		<Unit filename="include/record.h" />
+		<Unit filename="include/route.h" />
+		<Unit filename="include/visitnode.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/courier.cpp" />
+		<Unit filename="src/eorder.cpp" />
+		<Unit filename="src/location.cpp" />
+		<Unit filename="src/o2o_order.cpp" />
+		<Unit filename="src/problem.cpp" />
+		<Unit filename="src/record.cpp" />
+		<Unit filename="src/route.cpp" />
+		<Unit filename="src/visitnode.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
