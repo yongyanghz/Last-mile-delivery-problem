@@ -655,7 +655,7 @@ void problem::addCourier(courier c){
     solution.push_back(c);
 }
 /* Write the result of solution to a csv file*/
-/* 讲结果写入文件*/
+/* 将结果写入文件*/
 void problem::toCSV(ofstream &myfile){
     string record;
     for(std::size_t i = 0;i<solution.size();++i)
