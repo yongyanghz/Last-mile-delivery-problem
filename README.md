@@ -16,6 +16,28 @@ The details of the requirements are listed in [the link](https://tianchi.aliyun.
  
 The performance is measured by the total amount of time spent by all couriers. The less time, the better.
 
+## Delivery Strategy and Algorithm
+
+### Call graph of problem::solveProblem()
+![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classproblem_a37c6ff9240b7d94ab82b0b8cc2088f08_cgraph_org.svg) 
+
+Basic Strategy for a courier: 
+
+ 1. Add a courier, start working from 8:00 and at the branch that the first e-commerce package remained ;
+ 
+ 2. If there are e-commerce packages to delivery, get the e-commerce packages from the same depot branch. And the strategy to get next e-commerce package is pick the package that the delivery location is the nearest to the center of delivery locations of the other packages on hands.
+ 
+ 3. Plan a short path using  a greedy heuristic insert algorithm for the packages on hand;
+ 	
+ 4. If there are o2o packages to delivery, get the o2o packages, and insert them into the path if possible;
+ 
+ 4. Deilvery all the packages on hand through this path;
+ 
+ 5.  Back to the nearest depot branch, and repeat step 2-5 until the time is off.
+ 
+ Apply this strategy to all of the couriers until the job is done. 
+ 
+
 ## Class Design
 
 ### UML Model
@@ -68,27 +90,7 @@ A route class records route that a courier send all the packages on hands.
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classroute__coll__graph_org.svg) 
 
 
-## Delivery Strategy and Algorithm
 
-### Call graph of problem::solveProblem()
-![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classproblem_a37c6ff9240b7d94ab82b0b8cc2088f08_cgraph_org.svg) 
-
-Basic Strategy for a courier: 
-
- 1. Add a courier, start working from 8:00 and at the branch that the first e-commerce package remained ;
- 
- 2. If there are e-commerce packages to delivery, get the e-commerce packages from the same depot branch. And the strategy to get next e-commerce package is pick the package that the delivery location is the nearest to the center of delivery locations of the other packages on hands.
- 
- 3. Plan a short path using  a greedy heuristic insert algorithm for the packages on hand;
- 	
- 4. If there are o2o packages to delivery, get the o2o packages, and insert them into the path if possible;
- 
- 4. Deilvery all the packages on hand through this path;
- 
- 5.  Back to the nearest depot branch, and repeat step 2-5 until the time is off.
- 
- Apply this strategy to all of the couriers until the job is done. 
- 
 
 
 
