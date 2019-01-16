@@ -17,50 +17,67 @@ The details of the requirements are listed in [the link](https://tianchi.aliyun.
 The performance is measured by the total amount of time spent by all couriers. The less time, the better.
 
 ## Class Design
-UML Model
+
+### UML Model
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/Last-mile-delivery.svg) 
+
+### Classes
+
 - problem
+
 Responsible for load data and solve the problem
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classproblem__coll__graph_org.svg) 
 
 - courier 
-class of courier, incudes the information of  a courier.
+
+Class of courier, incudes the information of  a courier
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classcourier__coll__graph.svg) 
-eorder location o2o_order  record route visitnode
 
 - eorder
+
 class of e-commerce package
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classeorder__coll__graph.svg) 
 
 - o2o_order
+
 class of intra city O2O(Online To Offline) delivery package
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classo2o__order__coll__graph_org.svg) 
 
 - location
+
 class of location, it consists of id, longitude and latitude information
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classlocation__coll__graph.svg) 
 
 - record
+
 class of record, when a courier visit a place and leave, a record will be generated, which includes the location and time
 information
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classrecord__coll__graph.svg) 
 
 - visitnode
-Courier visit a place to delivery package, whether it si e-commerce package or o2o package, the visitnode record the index of package and the location.
-![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classvisitnode__coll__graph.svg) 
 
-- visitnode
 Courier visit a place to delivery package, whether it si e-commerce package or o2o package, the visitnode record the index of package and the location.
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classvisitnode__coll__graph.svg) 
 
 - route
+
 A route class records a courier start from one place to another place.
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classroute__coll__graph_org.svg) 
 
 
 ## Delivery Strategy and Algorithm
 
 Call graph of problem::solveProlbem()
+
 ![](https://github.com/yongyanghz/Last-mile-delivery-problem/blob/master/img/classproblem_a37c6ff9240b7d94ab82b0b8cc2088f08_cgraph_org.svg) 
 
 Basic Strategy for a courier: 
